@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  invisible_captcha only: [:create, :update], on_spam: :spam_enty?
   before_action :set_room, only: [:edit, :update, :destroy, :archives]
 
   def index
@@ -73,6 +74,11 @@ class RoomsController < ApplicationController
   end
 
   private
+
+    def spam_enty?
+      render json: 'Go Home Son!', status: :ok
+    end
+
     def set_room
       @room = Room.find_by! slug: params[:slug]
     end

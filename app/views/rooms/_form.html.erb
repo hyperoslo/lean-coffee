@@ -1,4 +1,5 @@
 <%= form_for(@room) do |f| %>
+  <%= invisible_captcha %>
   <% if @room.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
