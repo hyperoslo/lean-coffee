@@ -41,6 +41,9 @@ gem 'enumerize'
 # Font-Awesome SASS
 gem 'font-awesome-sass'
 
+# Prevent spam submissions
+gem 'invisible_captcha'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

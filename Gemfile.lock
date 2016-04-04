@@ -73,6 +73,8 @@ GEM
       activesupport (>= 4.1.0)
     httpclient (2.6.0.1)
     i18n (0.7.0)
+    invisible_captcha (0.8.0)
+      rails
     jbuilder (2.3.0)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -213,6 +215,7 @@ DEPENDENCIES
   enumerize
   figaro
   font-awesome-sass
+  invisible_captcha
   jbuilder (~> 2.0)
   jquery-rails
   lodash-rails
