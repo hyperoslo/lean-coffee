@@ -13,7 +13,7 @@ class Rack::Attack
   end
 
   # Throttle room creation
-  throttle('new/rooms', :limit => 5, :period => 60.minutes) do |req|
+  throttle('new/rooms', :limit => 2, :period => 24.hours) do |req|
     req.post? && req.path == "/rooms"
   end
 end
