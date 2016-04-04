@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  invisible_captcha only: [:create, :update], on_spam: :spam_enty?
+  invisible_captcha only: [:create, :update], on_spam: :spam_enty?, honeypot: :subtitle
   before_action :set_room, only: [:edit, :update, :destroy, :archives]
 
   def index
