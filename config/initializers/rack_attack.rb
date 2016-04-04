@@ -11,4 +11,9 @@ class Rack::Attack
   blacklist("block referer spam") do |request|
     request.referer =~ spammer_regexp
   end
+
+  # Throttle room creation
+  throttle('new/rooms', :limit => 5, :period => 60.minutes) do |req|
+    req.post? && req.path == "/rooms"
+  end
 end
