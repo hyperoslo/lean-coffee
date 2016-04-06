@@ -12,8 +12,8 @@ class Rack::Attack
     request.referer =~ spammer_regexp
   end
 
-  # Throttle room creation
-  throttle('new/rooms', :limit => 2, :period => 24.hours) do |req|
-    req.post? && req.path == "/rooms"
-  end
+  # # Throttle room creation
+  # throttle('new/rooms', :limit => 2, :period => 24.hours) do |req|
+  #   req.post? && req.path == "/rooms"
+  # end
 end
